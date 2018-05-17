@@ -1,6 +1,10 @@
 # BioinforTools
 Several Tools set for Bioinformatics 
 
+### Sequence Evaluation Tool
+
+Tool for evaluating DNA alignment result. The evaluation result is output in a text report.
+
 ### Exon 
 
 exon_gatk.sh

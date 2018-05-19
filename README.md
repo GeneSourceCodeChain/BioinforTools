@@ -1,9 +1,13 @@
 # BioinforTools
 Several Tools set for Bioinformatics 
 
-### Sequence Evaluation Tool
+### DNA Sequence Evaluation Tool
 
 Tool for evaluating DNA alignment result. The evaluation result is output in a text report.
+
+### Protein Sequence Alignment Tool
+
+Tool for aligning two protein sequences with Smith-Waterman Algorithm.
 
 ### Exon 
 

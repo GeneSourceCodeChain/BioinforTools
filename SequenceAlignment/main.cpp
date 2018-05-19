@@ -1,0 +1,57 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include "Alignment.h"
+
+int main(int argc,char ** argv)
+{
+	string HBB_HUMAN("VHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPKV"
+			"KAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFGK"
+			"EFTPPVQAAYQKVVAGVANALAHKYH");
+	string HBB_PANTR("VHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPKV"
+			"KAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFGK"
+			"EFTPPVQAAYQKVVAGVANALAHKYH");
+	string HBB1_MOUSE("VHLTDAEKAAVSCLWGKVNSDEVGGEALGRLLVVYPWTQRYFDSFGDLSSASAIMGNAKV"
+			"KAHGKKVITAFNDGLNHLDSLKGTFASLSELHCDKLHVDPENFRLLGNMIVIVLGHHLGK"
+			"DFTPAAQAAFQKVVAGVATALAHKYH");
+	string HBB_CHICK("VHWTAEEKQLITGLWGKVNVAECGAEALARLLIVYPWTQRFFASFGNLSSPTAILGNPMV"
+			"RAHGKKVLTSFGDAVKNLDNIKNTFSQLSELHCDKLHVDPENFRLLGDILIIVLAAHFSK"
+			"DFTPECQAAWQKLVRVVAHALARKYH");
+	string Q802A3_FUGRU("MVEWTDQERTIISNIFSTLDYEDVGSKSLIRCLIVYPWTQRYFAGFGNLYNAEAIKNNPN"
+			"IAKHGVTVLHGLDRAVKNMDNIKETYKELSELHSEKLHVDPDNFKLLSDCLTIVVATKMG"
+			 "SKFTPEIQATFQKFLAVVVSALGRQYH");
+	string Q540F0_VIGUN("MVAFSDKQEGLVNGAYEAFKADIPKYSVVFYTTILEKAPAAKNLFSFLANGVDATNPKLT"
+			 "GHAEKLFGLVRDSAAQLRASGGVVADAALGAVHSQKAVNDAQFVVVKEALVKTLKEAVGD"
+			 "KWSDELGTAVELAYDELAAAIKKAY");
+	string INSL3_HUMAN("MDPRLPAWALVLLGPALVFALGPAPTPEMREKLCGHHFVRALVRVCGGPRWSTEARRPAA"
+			"GGDRELLQWLERRHLLHGLVADSNLTLGPGLQPLPQTSHHHRHHRAAATNPARYCCLSGC"
+			"TQQDLLTLCPY");
+	Alignment alignment;
+	auto retval = alignment.alignment("xxxcde","abcxdex",BasicPolicy());
+	alignment.print_alignment(retval);
+	cout<<endl;
+	retval = alignment.alignment("deadly","ddgearlyk",PenaltyPolicy());
+	alignment.print_alignment(retval);
+	cout<<endl;
+	retval = alignment.alignment(HBB_HUMAN, HBB_PANTR,PenaltyPolicy());
+	alignment.print_alignment(retval);
+	cout<<endl;
+	retval = alignment.alignment(HBB_HUMAN, HBB1_MOUSE,PenaltyPolicy());
+	alignment.print_alignment(retval);
+	cout<<endl;
+	retval = alignment.alignment(HBB_HUMAN, HBB_CHICK,PenaltyPolicy());
+	alignment.print_alignment(retval);
+	cout<<endl;
+	retval = alignment.alignment(HBB_HUMAN, Q802A3_FUGRU,PenaltyPolicy());
+	alignment.print_alignment(retval);
+	cout<<endl;
+	retval = alignment.alignment(HBB_HUMAN, Q540F0_VIGUN,PenaltyPolicy());
+	alignment.print_alignment(retval);
+	cout<<endl;
+	retval = alignment.alignment(HBB_HUMAN, INSL3_HUMAN,PenaltyPolicy());
+	alignment.print_alignment(retval);
+	cout<<endl;
+
+	return EXIT_SUCCESS;
+}
+

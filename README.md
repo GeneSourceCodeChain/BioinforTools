@@ -9,6 +9,10 @@ Tool for evaluating DNA alignment result. The evaluation result is output in a t
 
 Tool for aligning two protein sequences with Smith-Waterman Algorithm.
 
+### Predictor to classify the pathogenicity of missense mutations
+
+The tool is an implement of the algorithm proposed in paper "Predicting the clinical impact of human mutation with deep neural networks". The tool can predict the pathogencity of missense mutations.
+
 ### Exon 
 
 exon_gatk.sh

@@ -19,6 +19,11 @@ exon_gatk.sh
 
 The script uses bwa, samtools, gatk and other tools to analyze exon mutation analysis.
 
+### Link
+
+Imputation using the linkage disequilibrium method with minimac4
+
+
 ### WGS
 
 pipline.sh
